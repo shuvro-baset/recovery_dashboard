@@ -12,3 +12,63 @@ body {
   background-size: 300px, 80vh, 100%;
   background-origin: content-box;
 }
+.search-box {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+.search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+.box {
+  /* width: 50%; */
+  height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff;
+  background: rgb(0, 51, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 51, 153, 1) 0%,
+    rgba(110, 9, 242, 1) 100%
+  );
+}
+.box img {
+  padding-right: 20px;
+  border-right: 1px solid rgb(154, 153, 252);
+}
+.box h2 {
+  margin: 0 20px;
+}
+.box div {
+  margin: 0 20px;
+}
+.box2 {
+  /* width: 50%; */
+  height: 100px;
+  padding: 10px;
+  border-radius: 15px;
+  color: #fff;
+  background: rgb(0, 51, 153);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 51, 153, 1) 0%,
+    rgba(110, 9, 242, 1) 100%
+  );
+}
+.box2 img {
+  padding-right: 46px;
+  border-right: 1px solid rgb(154, 153, 252);
+}
+.box2 div {
+  margin: 0 20px;
+}
+.box2 h4 {
+  color: #ffcc00;
+}
