@@ -13,6 +13,7 @@ body {
     center;
   background-size: 200px, 120px, 300px, 80vh, 100%;
   background-origin: content-box;
+  background-attachment: fixed;
 }
 .search-box {
   width: 80%;
@@ -29,7 +30,6 @@ body {
   border: none;
 }
 .box {
-  /* width: 50%; */
   height: 100px;
   padding: 10px;
   border-radius: 15px;
@@ -52,7 +52,6 @@ body {
   margin: 0 20px;
 }
 .box2 {
-  /* width: 50%; */
   height: 100px;
   padding: 10px;
   border-radius: 15px;
@@ -73,4 +72,15 @@ body {
 }
 .box2 h4 {
   color: #ffcc00;
+}
+
+/* responsive media queries*/
+@media only screen and (max-width: 992px) {
+  body {
+    background-image: url(images/ICE\ CUBES.png), url(images/element\ 1.png),
+      url(images/ICE\ CUBES.png), url(images/BG.png);
+    background-repeat: no-repeat;
+    background-position: left bottom, left bottom, right center, left top;
+    background-size: 120px, 230px, 120px, cover;
+  }
 }
