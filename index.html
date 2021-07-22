@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-12 col-md-6">
                 <div class="header-part text-center pt-5">
-                    <img src="images/recovery dashboard text.png" alt="">
+                    <img class="img-fluid" src="images/recovery dashboard text.png" alt="">
                 </div>
             </div>
         </div>
@@ -33,43 +33,84 @@
                     <input type="text" placeholder="Search">
                     <i class="fas fa-search"></i> 
                 </div>
-                
             </div>
-            <div class="col-lg-2 col-sm-12 col-12 col-md-2 d-flex flex-column justify-content-center align-items-center">
-                <nav class="navbar navbar-dark bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  </nav>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-            <div class=" col-lg-6 col col-12 col-sm-12  col-md-6 box d-flex  align-items-center"> 
-                    <img src="images/icon.png" alt="">
-                    <h2>Eligible</h2>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Yes</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">No</label>
-                      </div>
-            </div>
-        </div>
-        <div class="row justify-content-center mt-5">
-            <div class=" col-lg-6 col-sm-12 col-12 col-md-6 box2 d-flex  align-items-center"> 
-                    <img src="images/icon2.png" alt="">
-                    <div class='d-flex flex-column'>
-                        <h3>Amount of Recovery</h3>
-                        <h4><i class="fas fa-dollar-sign"></i> 0.00</h4>
+            <div class="col-lg-2 col-sm-12 col-12 col-md-2 d-flex flex-column justify-content-center align-items-center"> 
+                <div class="wrapper">
+                    <div class="menu">
+                        <div class="hamburger_menu">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <div class="dd_wrap">
+                            <ul>
+                                <li>
+                                    <a href="#" class="a_parent">
+                                        <div class="wrap">
+                                            <span class="text">BNB to BUSD</span>
+                                        </div>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
+    
 </main>
 
 
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center mt-5">
+        <div class=" col-lg-6 col col-12 col-sm-12  col-md-6 box d-flex  align-items-center"> 
+            <i class="fas fa-check-circle box-icon"></i>
+            <h2>Eligible</h2>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class=" col-lg-6 col-sm-12 col-12 col-md-6 box2 d-flex  align-items-center"> 
+            <i class="fas fa-dollar-sign box-icon"></i>
+            <div class='d-flex flex-column'>
+                <h3>Amount of Recovery</h3>
+                <h4><i class="fas fa-dollar-sign"></i> 0.00</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var hamburger_menu = document.querySelector(".hamburger_menu");
+        var dd_wrap = document.querySelector(".dd_wrap");
+        var a_parent =  document.querySelectorAll(".a_parent");
+
+	hamburger_menu.addEventListener("click", function(){
+		dd_wrap.classList.toggle("active");
+		a_parent.forEach(function(aitem){
+			aitem.classList.remove("active");
+		})
+	})
+
+	
+
+	a_parent.forEach(function(aitem){
+
+		aitem.addEventListener("click", function(){
+			a_parent.forEach(function(aitem){
+				aitem.classList.remove("active");
+			})
+			aitem.classList.add("active");
+		})
+	})
+
+    </script>
 
 
     <!-- bootstrap js links -->

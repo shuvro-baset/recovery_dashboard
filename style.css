@@ -4,6 +4,7 @@
 }
 body {
   height: 100vh;
+  width: 100% !important;
   background-repeat: no-repeat;
 
   background-image: url(images/ICE\ CUBES.png), url(images/ICE\ CUBES.png),
@@ -31,6 +32,7 @@ body {
 }
 .box {
   height: 100px;
+  width: 100%;
   padding: 10px;
   border-radius: 15px;
   color: #fff;
@@ -41,8 +43,10 @@ body {
     rgba(110, 9, 242, 1) 100%
   );
 }
-.box img {
-  padding-right: 20px;
+.box-icon {
+  font-size: 60px;
+  width: 60px !important;
+  padding-right: 70px;
   border-right: 1px solid rgb(154, 153, 252);
 }
 .box h2 {
@@ -83,4 +87,111 @@ body {
     background-position: left bottom, left bottom, right center, left top;
     background-size: 120px, 230px, 120px, cover;
   }
+}
+@media screen and (max-width: 426px) {
+  .box h2 {
+    font-size: 18px;
+  }
+  .box input,
+  .box label {
+    font-size: 14px;
+  }
+  .box-icon {
+    font-size: 30px;
+    padding-right: 15px;
+  }
+  .box2 {
+    font-size: 14px;
+  }
+}
+.hamburger_menu {
+  width: 70px;
+  height: 50px;
+  background: #69656593;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-size: 26px;
+  cursor: pointer;
+  margin: 0 30px;
+  transition: all 0.2s ease;
+}
+
+.dd_wrap {
+  width: 150px;
+  position: absolute;
+  display: none;
+}
+
+.dd_wrap ul li {
+  position: relative;
+  list-style: none;
+}
+
+.dd_wrap ul li a {
+  display: block;
+  background: #2a05fc;
+  color: #fff;
+  padding: 5px 10px;
+  width: 100%;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.dd_wrap ul li a:hover,
+.dd_wrap ul li a.active {
+  background: #430cb39d;
+}
+
+.dd_wrap ul li:first-child a {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.dd_wrap ul li:last-child a {
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/* 
+.dd_wrap:before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: transparent transparent #f8f6f6 transparent;
+  z-index: 1;
+} */
+
+.dd_wrap ul li a .icon {
+  width: 30px;
+  display: inline-block;
+}
+
+.dd_wrap.active {
+  display: block;
+}
+
+/* .dd_menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  display: none;
+}
+
+.dd_menu:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  z-index: 1;
+  border: 15px solid;
+  border-color: transparent #fcf8f8 transparent transparent;
+} */
+
+.dd_wrap ul li a.active + .dd_menu {
+  display: block;
 }
