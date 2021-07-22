@@ -77,33 +77,6 @@ body {
 .box2 h4 {
   color: #ffcc00;
 }
-
-/* responsive media queries*/
-@media only screen and (max-width: 992px) {
-  body {
-    background-image: url(images/ICE\ CUBES.png), url(images/element\ 1.png),
-      url(images/ICE\ CUBES.png), url(images/BG.png);
-    background-repeat: no-repeat;
-    background-position: left bottom, left bottom, right center, left top;
-    background-size: 120px, 230px, 120px, cover;
-  }
-}
-@media screen and (max-width: 426px) {
-  .box h2 {
-    font-size: 18px;
-  }
-  .box input,
-  .box label {
-    font-size: 14px;
-  }
-  .box-icon {
-    font-size: 30px;
-    padding-right: 15px;
-  }
-  .box2 {
-    font-size: 14px;
-  }
-}
 .hamburger_menu {
   width: 70px;
   height: 50px;
@@ -153,17 +126,6 @@ body {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* 
-.dd_wrap:before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 10px solid;
-  border-color: transparent transparent #f8f6f6 transparent;
-  z-index: 1;
-} */
 
 .dd_wrap ul li a .icon {
   width: 30px;
@@ -174,24 +136,36 @@ body {
   display: block;
 }
 
-/* .dd_menu {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  display: none;
-}
-
-.dd_menu:before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -30px;
-  z-index: 1;
-  border: 15px solid;
-  border-color: transparent #fcf8f8 transparent transparent;
-} */
-
 .dd_wrap ul li a.active + .dd_menu {
   display: block;
+}
+
+/* responsive media queries*/
+@media only screen and (max-width: 992px) {
+  body {
+    background-image: url(images/ICE\ CUBES.png), url(images/element\ 1.png),
+      url(images/ICE\ CUBES.png), url(images/BG.png);
+    background-repeat: no-repeat;
+    background-position: left bottom, left bottom, right center, left top;
+    background-size: 120px, 230px, 120px, cover;
+  }
+  .hamburger_menu {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .box h2 {
+    font-size: 18px;
+  }
+  .box input,
+  .box label {
+    font-size: 14px;
+  }
+  .box-icon {
+    font-size: 30px;
+    padding-right: 15px;
+  }
+  .box2 {
+    font-size: 14px;
+  }
 }
